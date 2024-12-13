@@ -6,8 +6,6 @@ import app from "./app";
 import pino, {Logger} from 'pino';
 import mongoose from "mongoose";
 
-
-
 const port: number = env.DEFAULT_PORT_NUM;
 const logger: Logger = pino({})
 
