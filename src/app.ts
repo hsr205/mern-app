@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import express, {Request, Response, Express, NextFunction} from "express";
-import NoteModel from "./models/notes";
+import noteRoutes from "./routes/note-route"
 import pino, {Logger} from "pino";
 
 dotenv.config();
@@ -9,24 +9,7 @@ const logger: Logger = pino({})
 
 const app: Express = express();
 
-// Creates the end point "/"
-// The same logic can be used to create any endpoint required
-app.get("/", (request, response) => {
-    response.send("Hello World!");
-});
-
-app.get("/notes", async (request, response, next) => {
-    try {
-        // Looks through MongoDB to find all "Notes" instances
-        // .exec() returns a promise
-        // await is an async keyword
-        const notes = await NoteModel.find().exec();
-        response.status(200).json(notes);
-    } catch (error) {
-        // Calls the exception handler THAT IS DIRECTLY AFTER THIS CODE BLOCK
-        next(error);
-    }
-});
+app.use("/api/notes", noteRoutes);
 
 // In the event that the user passes in an endpoint that doesn't exist, this will pass a HTTP 404 exception
 app.use((request: Request, response: Response, nextFunction: NextFunction) => {
