@@ -1,15 +1,24 @@
-import express, {Express} from "express";
 import dotenv from 'dotenv';
+dotenv.config();
 
-dotenv.config({path: `../.env`});
+import env from "./util/validateEnv";
+import app from "./app";
+import pino, {Logger} from 'pino';
+import mongoose from "mongoose";
 
-const app: Express = express();
-const port: string | number = process.env.DEFAULT_PORT_NUM || 8080;
 
-app.get("/", (request, response) => {
-   response.send("Hello World!");
-});
 
-app.listen(port, () => {
-    console.log(`Server started on port ${port}`);
-})
+const port: number = env.DEFAULT_PORT_NUM;
+const logger: Logger = pino({})
+
+mongoose.connect(env.MONGO_DB_CONNECTION_STR)
+    .then(() => {
+        logger.info("Connected to MongoDB")
+        app.listen(process.env.DEFAULT_PORT_NUM, () => {
+            console.log(`Server started on port ${port}`);
+        })
+    })
+    .catch((err) => {
+        logger.error(`MongoDB Connection exception thrown: ${err.message}`);
+    });
+
