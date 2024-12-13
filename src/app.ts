@@ -29,7 +29,7 @@ app.get("/notes", async (request, response, next) => {
 });
 
 // In the event that the user passes in an endpoint that doesn't exist, this will pass a HTTP 404 exception
-app.use((request: Request, response: Response, next: NextFunction) => {
+app.use((request: Request, response: Response, nextFunction: NextFunction) => {
     response.status(404).json(
         {
             error: "Page Not Found: HTTP 404",
