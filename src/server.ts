@@ -10,7 +10,7 @@ const port: number = env.DEFAULT_PORT_NUM;
 mongoose.connect(env.MONGO_DB_CONNECTION_STR)
     .then(() => {
         console.log("Connected to MongoDB")
-        app.listen(process.env.DEFAULT_PORT_NUM, () => {
+        app.listen(env.DEFAULT_PORT_NUM, () => {
             console.log(`Server started on port ${port}`);
         })
     })
