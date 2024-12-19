@@ -1,5 +1,7 @@
 import NoteModel from "../models/notes";
 import {RequestHandler} from "express";
+import createHttpError from "http-errors";
+import {isValidObjectId} from "mongoose";
 
 export const getNotes: RequestHandler = async (request, response, next) => {
     try {
@@ -15,13 +17,24 @@ export const getNotes: RequestHandler = async (request, response, next) => {
 }
 
 export const getNote: RequestHandler = async (request, response, next) => {
+
+    const noteId = request.params.noteId;
+
     try {
         // Looks through MongoDB to find all "Notes" instances
         // .exec() returns a promise
         // await is an async keyword
-        const noteId: string = request.params.noteId;
+
+        if (!isValidObjectId(noteId)) {
+            throw createHttpError(400, `Invalid note id provided`);
+        }
 
         const note = await NoteModel.findById(noteId).exec();
+
+        if (!note) {
+            throw createHttpError(404, `Note not found`);
+        }
+
         response.status(200).json(note);
     } catch (error) {
         // Calls the exception handler THAT IS DIRECTLY AFTER THIS CODE BLOCK
@@ -29,13 +42,23 @@ export const getNote: RequestHandler = async (request, response, next) => {
     }
 }
 
-export const createNote: RequestHandler = async (request, response, next) => {
+interface CreateNoteBody {
+    noteTitle?: string;
+    noteText?: string;
+}
+
+export const createNote: RequestHandler<unknown, unknown, CreateNoteBody, unknown> = async (request, response, next) => {
 
 
     try {
+
         // Stores the title and text of the note being created by the user on the front end
-        const noteTitle: string = request.body.noteTitle;
-        const noteText: string = request.body.noteText;
+        const noteTitle = request.body.noteTitle;
+        const noteText = request.body.noteText;
+
+        if (!noteTitle) {
+            throw createHttpError(400, "Exception thrown; a title is required for each note");
+        }
 
         // Passes the newly created note to the Model and returns a promise
         // This is why we use the async "await" key word
