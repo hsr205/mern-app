@@ -75,3 +75,53 @@ export const createNote: RequestHandler<unknown, unknown, CreateNoteBody, unknow
     }
 
 };
+
+interface UpdateNoteParams {
+    noteId: string
+}
+
+interface UpdateNoteBody {
+    noteTitle?: string,
+    noteText?: string
+}
+
+export const updateNote: RequestHandler<UpdateNoteParams, unknown, UpdateNoteBody, unknown> = async (request, response, next) => {
+
+
+    try {
+        // Looks through MongoDB to find all "Notes" instances
+        // .exec() returns a promise
+        // await is an async keyword
+
+        const newNoteTitle = request.body.noteTitle;
+        const newNoteText = request.body.noteText;
+        const noteId = request.params.noteId;
+
+
+        if (!newNoteTitle) {
+            throw createHttpError(400, "Exception thrown; a title is required for each note");
+        }
+
+        if (!isValidObjectId(noteId)) {
+            throw createHttpError(400, `Invalid note id provided`);
+        }
+
+        const note = await NoteModel.findById(noteId).exec();
+
+        if (!note) {
+            throw createHttpError(404, `Note not found`);
+        }
+
+        note.noteTitle = newNoteTitle;
+        note.noteText = newNoteText;
+
+        const updatedNote = await note.save();
+
+        response.status(200).json(updatedNote);
+
+    } catch (error) {
+        // Calls the exception handler THAT IS DIRECTLY AFTER THIS CODE BLOCK
+        next(error);
+    }
+
+};
