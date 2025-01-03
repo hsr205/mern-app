@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="780a38c5-dac5-453d-b01d-d9e178a9396c" name="Changes" comment="Reformat code" />
+    <list default="true" id="780a38c5-dac5-453d-b01d-d9e178a9396c" name="Changes" comment="Update dependencies">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +87,7 @@
       <updated>1734035758868</updated>
       <workItem from="1734035759964" duration="445000" />
       <workItem from="1734036441005" duration="208000" />
-      <workItem from="1734038232328" duration="35880000" />
+      <workItem from="1734038232328" duration="37666000" />
     </task>
     <task id="LOCAL-00001" summary="Add dependencies">
       <option name="closed" value="true" />
@@ -364,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735912954765</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Update dependencies">
+      <option name="closed" value="true" />
+      <created>1735913167599</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1735913167599</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +387,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add .env file dependency / logic" />
     <MESSAGE value="Remove file" />
     <MESSAGE value="Add file" />
     <MESSAGE value="Add env variable validator" />
@@ -399,6 +411,7 @@
     <MESSAGE value="Add xml file" />
     <MESSAGE value="Add react app" />
     <MESSAGE value="Reformat code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformat code" />
+    <MESSAGE value="Update dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update dependencies" />
   </component>
 </project>
