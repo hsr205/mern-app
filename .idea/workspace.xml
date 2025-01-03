@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="780a38c5-dac5-453d-b01d-d9e178a9396c" name="Changes" comment="Add delete logic">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BasicApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/BasicApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/note-controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/notes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/note-route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/validateEnv.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
-    </list>
+    <list default="true" id="780a38c5-dac5-453d-b01d-d9e178a9396c" name="Changes" comment="Reformat code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,27 +22,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.app.ts.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.ts.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.server.ts.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/HenryRothenberg/WebstormProjects/BasicApp/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.app.ts.executor": "Run",
+    "Node.js.index.ts.executor": "Run",
+    "Node.js.server.ts.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.lint.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/HenryRothenberg/WebstormProjects/BasicApp/backend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
@@ -100,7 +82,7 @@
       <updated>1734035758868</updated>
       <workItem from="1734035759964" duration="445000" />
       <workItem from="1734036441005" duration="208000" />
-      <workItem from="1734038232328" duration="35445000" />
+      <workItem from="1734038232328" duration="35880000" />
     </task>
     <task id="LOCAL-00001" summary="Add dependencies">
       <option name="closed" value="true" />
@@ -350,7 +332,39 @@
       <option name="project" value="LOCAL" />
       <updated>1735832469079</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Move project to backend directory">
+      <option name="closed" value="true" />
+      <created>1735912586985</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1735912586985</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add xml file">
+      <option name="closed" value="true" />
+      <created>1735912599270</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1735912599270</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Add react app">
+      <option name="closed" value="true" />
+      <created>1735912810294</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1735912810294</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Reformat code">
+      <option name="closed" value="true" />
+      <created>1735912954765</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1735912954765</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,8 +374,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add config file" />
-    <MESSAGE value="Add xml file" />
     <MESSAGE value="Add .env file dependency / logic" />
     <MESSAGE value="Remove file" />
     <MESSAGE value="Add file" />
@@ -383,6 +395,10 @@
     <MESSAGE value="Add / alter exception handling" />
     <MESSAGE value="Add update logic" />
     <MESSAGE value="Add delete logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add delete logic" />
+    <MESSAGE value="Move project to backend directory" />
+    <MESSAGE value="Add xml file" />
+    <MESSAGE value="Add react app" />
+    <MESSAGE value="Reformat code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat code" />
   </component>
 </project>
