@@ -1,28 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Button} from "react-bootstrap";
+import {Note} from "./models/note"
 
 function App() {
 
-    let [counter, setCounter] = React.useState(0);
+    let [notes, setNotes] = React.useState<Note[]>([]);
 
-    function incrementCounter(): void {
-        setCounter(counter + 1);
-    }
+    React.useEffect(() => {
+        async function loadNotes() {
+            try {
+                const response = await fetch('/api/notes', {method: "GET"});
+                const notes = await response.json();
+                setNotes(notes)
+            } catch (error) {
+                console.error(`Exception was thrown: ${error}`);
+                alert(error.message);
+            }
+        }
+
+        loadNotes();
+    }, []);
+
 
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    Hello from React App!
-                </p>
-
-                <Button onClick={() => incrementCounter()}>
-                    Click Count: {counter}
-                </Button>
-            </header>
+            {JSON.stringify(notes)}
         </div>
     );
 }
