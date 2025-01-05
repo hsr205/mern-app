@@ -6,14 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="780a38c5-dac5-453d-b01d-d9e178a9396c" name="Changes" comment="Update xml file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,7 +95,7 @@
       <updated>1734035758868</updated>
       <workItem from="1734035759964" duration="445000" />
       <workItem from="1734036441005" duration="208000" />
-      <workItem from="1734038232328" duration="42069000" />
+      <workItem from="1734038232328" duration="48358000" />
     </task>
     <task id="LOCAL-00001" summary="Add dependencies">
       <option name="closed" value="true" />
@@ -417,7 +425,39 @@
       <option name="project" value="LOCAL" />
       <updated>1735917563883</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Add proxy">
+      <option name="closed" value="true" />
+      <created>1735919430146</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1735919430146</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Render backend data on frontend UI">
+      <option name="closed" value="true" />
+      <created>1735919460278</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1735919460278</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Add interface">
+      <option name="closed" value="true" />
+      <created>1735919473094</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1735919473094</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Update xml file">
+      <option name="closed" value="true" />
+      <created>1735919504640</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1735919504640</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,9 +467,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add MongoDB connection logic" />
-    <MESSAGE value="Add comments / reformat code" />
-    <MESSAGE value="Add notes model" />
     <MESSAGE value="Add error handling / endpoint / mongodb interaction" />
     <MESSAGE value="Alter parameter name" />
     <MESSAGE value="Add controller" />
@@ -451,6 +488,9 @@
     <MESSAGE value="Add dependencies" />
     <MESSAGE value="Add button to UI" />
     <MESSAGE value="Alter html file" />
+    <MESSAGE value="Add proxy" />
+    <MESSAGE value="Render backend data on frontend UI" />
+    <MESSAGE value="Add interface" />
     <MESSAGE value="Update xml file" />
     <option name="LAST_COMMIT_MESSAGE" value="Update xml file" />
   </component>
